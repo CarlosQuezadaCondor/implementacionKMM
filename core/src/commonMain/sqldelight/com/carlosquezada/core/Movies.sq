@@ -1,0 +1,31 @@
+CREATE TABLE MovieEntity(
+    id INTEGER AS Int NOT NULL,
+    voteCount INTEGER AS Int NOT NULL ,
+    voteAverage REAL NOT NULL,
+    isVideo INTEGER AS Boolean NOT NULL ,
+    title TEXT NOT NULL,
+    popularity REAL NOT NULL,
+    posterPath TEXT NOT NULL,
+    originalLanguage TEXT NOT NULL,
+    originalTitle TEXT NOT NULL,
+    backdropPath TEXT NOT NULL,
+    releaseDate TEXT NOT NULL,
+    adult INTEGER AS Boolean NOT NULL,
+    overview TEXT NOT NULL,
+    onStore INTEGER AS Boolean NOT NULL,
+    hasDetails INTEGER AS Boolean NOT NULL,
+    isPopular INTEGER AS Boolean NOT NULL,
+    isTopRated INTEGER AS Boolean NOT NULL,
+    isUpComing INTEGER AS Boolean NOT NULL
+);
+
+selectAll:
+SELECT * FROM MovieEntity;
+
+addOrUpdate:
+INSERT OR REPLACE INTO MovieEntity(id,voteCount , voteAverage ,
+                                 isVideo ,title , popularity ,
+                                 posterPath , originalLanguage , originalTitle ,
+                                 backdropPath , releaseDate , adult ,
+                                 overview , onStore ,hasDetails ,
+                                 isPopular ,isTopRated , isUpComing ) VALUES ?;
